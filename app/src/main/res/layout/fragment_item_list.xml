@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listFragment"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list_view"
+        android:name="com.example.list.ItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:context=".ListFragment"
+        android:layout_weight="1"
+        tools:listitem="@layout/fragment_item" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:onClick="onAddButtonClick"
+        android:text="@string/add_button_text">
+    </Button>
+
+</LinearLayout>
